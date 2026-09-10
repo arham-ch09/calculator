@@ -1,0 +1,27 @@
+let display = document.getElementById("display");
+let result = false;
+
+
+function add(value) {
+  if (result) {
+        display.value = value;
+        result = false;
+    } 
+    else {
+        display.value += value;
+    }
+}
+
+function clearDisplay() {
+  display.value = "";
+  result= false;
+  
+}
+
+function calculate() {
+  display.value = eval(display.value);
+  result=true;
+}
+function backspace() {
+    display.value = display.value.slice(0, -1);
+}
